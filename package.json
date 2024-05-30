@@ -1,6 +1,6 @@
 {
 	"name": "@thedannicraft/wiresense",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Client libary for Wiresense",
 	"main": "index.js",
 	"author": "TheDanniCraft",
@@ -22,7 +22,7 @@
 		"typescript": "^5.4.5"
 	},
 	"scripts": {
-		"link": "npx tsc && npm link",
-		"publish": "npx tsc && npm publish --access public"
+		"npm:link": "npx tsc && npm link",
+		"npm:publish": "npx tsc && npm publish --access public"
 	}
 }
