@@ -3,9 +3,12 @@
 ![wiresense.js](https://socialify.git.ci/Wiresense/wiresense.js/image?forks=1&issues=1&language=1&name=1&owner=1&pattern=Solid&pulls=1&stargazers=1&theme=Auto)
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Made%20with%20Love%E2%9D%A4%EF%B8%8F-black?style=for-the-badge
-    " alt="made with love">
+    <img src="https://img.shields.io/badge/Made%20with%20Love%E2%9D%A4%EF%B8%8F-black?style=for-the-badge" alt="made with love">
     <img src="https://img.shields.io/badge/Typescript-ts?style=for-the-badge&amp;logo=typescript&amp;logoColor=white&amp;color=%233178C6" alt="typescript">
+    <img src="https://img.shields.io/github/actions/workflow/status/Wiresense/wiresense.js/publish.yml?style=for-the-badge" alt="build status">
+    <img src="https://img.shields.io/npm/v/%40thedannicraft%2Fwiresense?style=for-the-badge
+    " alt="npm version">
+    <img src="https://img.shields.io/npm/dy/%40thedannicraft%2Fwiresense?style=for-the-badge" alt="npm downloads">
 </p>
 
 Client libary for Wiresense
