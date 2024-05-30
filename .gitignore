@@ -1,0 +1,4 @@
+# ignore compiled js file 
+index.js
+
+node_modules
