@@ -55,10 +55,10 @@ Execute a sensor (Send to frontend and save to file)
 mySensor.execute();
 ```
 
-## License
+## 📜License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-## Authors
+## ✍️Authors
 
 - [@thedannicraft](https://www.github.com/thedannicraft)
