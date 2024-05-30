@@ -75,9 +75,9 @@ export class Wiresense {
      * Initializes the Wiresense instance.
      * @param {string} name - The name/key of the sensor.
      * @param {Function} execFunction - The function that reads the sensor value and returns an object with key-value pairs.
-     * @param {string} baseCsvFilePath - The base file path (without extension) for logging sensor data in CSV format.
+     * @param {string} baseFilePath - The base file path (without extension) for logging sensor data in CSV format.
      */
-    constructor(name: string, execFunction: () => Record<string, any>, baseCsvFilePath: string) {
+    constructor(name: string, execFunction: () => Record<string, any>, baseFilePath: string) {
         if (!Wiresense.configured) {
             throw new Error('Wiresense is not configured. Call config() before creating instances.');
         }
@@ -96,12 +96,13 @@ export class Wiresense {
             throw new Error('execFunction must return a non-empty object with key-value pairs.');
         }
 
-        const baseName = path.basename(baseCsvFilePath, path.extname(baseCsvFilePath));
-        const dirName = path.dirname(baseCsvFilePath);
+        const ext = path.extname(baseFilePath);
+        const baseName = path.basename(baseFilePath, path.extname(baseFilePath));
+        const dirName = path.dirname(baseFilePath);
 
         fs.mkdirSync(dirName, { recursive: true });
 
-        this.csvFilePath = path.join(dirName, `${baseName}_${Date.now()}.csv`);
+        this.csvFilePath = path.join(dirName, `${baseName}_${Date.now()}${ext}`);
 
         Wiresense.sensors.push(this);
 

@@ -1,6 +1,6 @@
 {
 	"name": "@thedannicraft/wiresense",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Client libary for Wiresense",
 	"main": "index.js",
 	"author": "TheDanniCraft",
