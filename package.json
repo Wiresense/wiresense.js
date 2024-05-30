@@ -16,5 +16,5 @@
 		"publish": "npx tsc && npm publish --access public"
 	},
 	"author": "TheDanniCraft",
-	"license": "ISC"
+	"license": "MIT"
 }
