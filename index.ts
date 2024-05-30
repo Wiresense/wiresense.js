@@ -92,6 +92,9 @@ export class Wiresense {
 
         const baseName = path.basename(baseCsvFilePath, path.extname(baseCsvFilePath));
         const dirName = path.dirname(baseCsvFilePath);
+
+        fs.mkdirSync(dirName, { recursive: true });
+
         this.csvFilePath = path.join(dirName, `${baseName}_${Date.now()}.csv`);
 
         Wiresense.sensors.push(this);
