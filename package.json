@@ -3,6 +3,16 @@
 	"version": "1.0.0",
 	"description": "Client libary for Wiresense",
 	"main": "index.js",
+	"author": "TheDanniCraft",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Wiresense/wiresense.js.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Wiresense/wiresense.js/issues"
+	},
+	"homepage": "https://github.com/Wiresense/wiresense.js#readme",
 	"dependencies": {
 		"ws": "^8.17.0"
 	},
@@ -14,7 +24,5 @@
 	"scripts": {
 		"link": "npx tsc && npm link",
 		"publish": "npx tsc && npm publish --access public"
-	},
-	"author": "TheDanniCraft",
-	"license": "MIT"
+	}
 }
