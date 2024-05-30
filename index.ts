@@ -90,6 +90,12 @@ export class Wiresense {
         this.name = name;
         this.execFunction = execFunction;
 
+        // Validate execFunction
+        const data = execFunction();
+        if (typeof data !== 'object' || data === null || Array.isArray(data) || Object.keys(data).length === 0) {
+            throw new Error('execFunction must return a non-empty object with key-value pairs.');
+        }
+
         const baseName = path.basename(baseCsvFilePath, path.extname(baseCsvFilePath));
         const dirName = path.dirname(baseCsvFilePath);
 
@@ -117,6 +123,11 @@ export class Wiresense {
         }
 
         const data = this.execFunction();
+
+        if (typeof data !== 'object' || data === null || Array.isArray(data) || Object.keys(data).length === 0) {
+            throw new Error('execFunction must return a non-empty object with key-value pairs.');
+        }
+
         const timestamp = Date.now();
         const payload = {
             key: this.name,
