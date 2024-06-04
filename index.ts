@@ -75,16 +75,20 @@ export class Wiresense {
      * Initializes the Wiresense instance.
      * @param {string} name - The name/key of the sensor.
      * @param {Function} execFunction - The function that reads the sensor value and returns an object with key-value pairs.
-     * @param {string} baseFilePath - The base file path (without extension) for logging sensor data in CSV format.
+     * @param {string} baseFilePath - The base file path (with extension) for logging sensor data in CSV format.
      */
     constructor(name: string, execFunction: () => Record<string, any>, baseFilePath: string) {
         if (!Wiresense.configured) {
             throw new Error('Wiresense is not configured. Call config() before creating instances.');
         }
 
+        const excludedChars = ["\n", "\r"];
         const existingSensor = Wiresense.sensors.find(sensor => sensor.name === name);
         if (existingSensor) {
-            throw new Error(`Sensor with key "${name}" already exists.`);
+            throw new Error(`Sensor with name "${name}" already exists.`);
+        } else if (excludedChars.some(ec => name.includes(ec))) {
+            const excludedCharsBytes = excludedChars.map(ec => `\\x${Buffer.from(ec).toString('hex')}`).join(', ');
+            throw new Error(`Sensor name cannot include these chars: ${excludedCharsBytes}`);
         }
 
         this.name = name;
