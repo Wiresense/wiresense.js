@@ -2,7 +2,7 @@
 name: "\U0001F6E0️ Feature request"
 about: Suggest an idea for this project
 title: "[\U0001F6E0️]"
-labels: bug
+labels: enhancement
 assignees: TheDanniCraft
 
 ---
