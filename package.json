@@ -14,10 +14,10 @@
 	},
 	"homepage": "https://github.com/Wiresense/wiresense.js#readme",
 	"dependencies": {
-		"ws": "^8.18.1"
+		"ws": "^8.18.2"
 	},
 	"devDependencies": {
-		"@types/node": "^20.17.32",
+		"@types/node": "^20.17.46",
 		"@types/ws": "^8.18.1",
 		"typescript": "^5.8.3"
 	},
