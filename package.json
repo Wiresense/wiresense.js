@@ -17,9 +17,9 @@
 		"ws": "^8.18.3"
 	},
 	"devDependencies": {
-		"@types/node": "^20.19.17",
+		"@types/node": "^20.19.19",
 		"@types/ws": "^8.18.1",
-		"typescript": "^5.9.2"
+		"typescript": "^5.9.3"
 	},
 	"scripts": {
 		"npm:link": "npx tsc && npm link",
